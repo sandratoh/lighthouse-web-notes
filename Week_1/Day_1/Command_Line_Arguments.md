@@ -16,6 +16,7 @@ Strings of text used to pass additional info to a program when an app is run thr
 * Built-in method in Node.js
 * Global object that you can use without importing any additional libraries
 * Pass arguments to a Node.js application, and you can access them within the application via the `process.argv` array
+* Summary: an array containing all the command line arguments used to execute our code, including the interpreter `node` and the file we executed
 
 ### Syntax of Array
 * **First element** (index 0): always a file system path pointing to the `node` exectuable
