@@ -56,7 +56,7 @@
       Print num
     End if
     End loop
-  ```
+    ```
 
 --
 ## Step 4: Translate Solution to JavaScript
