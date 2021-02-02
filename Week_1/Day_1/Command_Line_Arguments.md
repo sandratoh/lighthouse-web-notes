@@ -21,7 +21,7 @@ Strings of text used to pass additional info to a program when an app is run thr
 ### Syntax of Array
 * **First element** (index 0): always a file system path pointing to the `node` exectuable
 * **Second element** (index 1): name of the JavaScript file that is being executed
-* **Third+ element** (index 2 onward): first arguement actually passed by user
+* **Third+ element** (index 2 onward): first argument actually passed by user
 
 #### Tips: Remember JS uses zero-based indexes on arrays
 
@@ -47,6 +47,20 @@ Output:
 2 -> tom
 3 -> jack
 4 -> 43
+```
+
+#### Tips: Can use the array `slice` method to remove some initial elements that we do not need
+
+```javascript
+//JS console
+const args = process.argv;
+console.log = args.slice(2);
+```
+
+```
+// Terminal command and output
+$ node sum.js 10 25
+['10', '25']
 ```
 
 --
