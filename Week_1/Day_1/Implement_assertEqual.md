@@ -35,3 +35,5 @@ for (let number = 2; number <= 5; number += 1) {
 // the # is 5
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}
 ```
+## Create own assertion function `assertEqual`
+Custom assert function will also log a message to console verifying test cases. Except we can customize it with emoji to make it more colourful and verbose.
