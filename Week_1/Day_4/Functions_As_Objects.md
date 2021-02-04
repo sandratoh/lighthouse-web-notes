@@ -1,6 +1,11 @@
 # JavaScript Functions As Objects
 
 ## In Javascript, functions are **first-class objects**
+* An object with having no restrictions on its creation, destruction, or usage
+* Ability includes: 
+  * being passed as an argument, 
+  * returned from a function, and 
+  * assigned to a variable, etc.
 
 #### What it means:
 1. Functions can be stored in variables and passed around
