@@ -15,6 +15,7 @@
 
 #### A call back function is:
 * a function passed (by reference) into another function (the *'receiver'* function)
+* can also be called an *inline* function
 
 #### Interaction between receiver func and callback func:
 * *Receiver* function accept behaviours to perform by calling the *callback* function
