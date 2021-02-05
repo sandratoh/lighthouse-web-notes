@@ -1,0 +1,40 @@
+Hello World!
+
+This is a vim tutorial!
+
+To get started:
+* i = begin inserting text at the current cursor position
+* a = begin inserting text after the current cursor position
+
+How to move around in vim you ask?
+* H = left
+* K = up
+* L = right
+* J = down
+
+Some vim commands (capital letters matter here):
+* Y = copies a line of text to  the buffer
+* P = paste it to the cursor's current position
+* dd = delete the whole line of text
+* yy = copies a whole line of text
+* :w = saves a file
+
+How to quit vim:
+* :wq = write (save) and quit file (and vim)
+* :q! = quit and ignore changes made since last file save
+
+Let's try them out!
+
+Sample Paragraph:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor dictum leo id vestibulum. Curabitur ac enim ut quam feugiat bibendum. Mauris sodales sem felis, eget tempor orci fringilla ut. Curabitur euismod tellus a urna maximus facilisis in at mauris. Donec condimentum purus vitae sodales tincidunt.
+
+Maybe that lorem ipsum was too big, let's break it down a little.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor dictum leo id vestibulu
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor dictum leo id vestibulu
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor dictum leo id vestibulu
+
+Vestibulum luctus ipsum id euismod 
+ 
