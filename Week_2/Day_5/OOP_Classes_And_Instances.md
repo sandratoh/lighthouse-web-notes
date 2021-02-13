@@ -4,7 +4,9 @@
 
 * A class describes what the object is going to be, and we can create new objects using the class
 
-### Class
+--
+
+## Class
 
 * To declare a class: use the `class` keyword with the name of the class
   *  Name of class: a noun with first letter capitalized
@@ -74,12 +76,80 @@ class Pizza {
 }
 ```
 
---
 
-## Customizing the `constructor`
+
+### Customizing the `constructor`
 
 * Every class can have a single constructor method that will get called when an instance of that class is created
 
-* Constructor method is the best place to set  up any default property values for an object
+* Constructor method is the best place to set up any default property values for an object
 
 * It's a method (function), so ppl can also pass in values (parameters) to the constructor method
+
+* If you want to specify the instance's properties when it is created, set parameters in the class's `constructor` method, then pass values in the parameters as you're declaring the instance (see example).
+
+
+Establishing a new `class` called `Pizza`:
+```javascript
+class Pizza {
+
+  constructor(size, crust) {
+    this.size = size;
+    this.crust = crust;
+    this.toppings = ["cheese"];
+  }
+
+  addTopping(topping) {
+    this.toppings.push(topping);
+  }
+
+}
+```
+
+Using the class to create a new object, but passing in the size and crust:
+```javascript
+let pizza3 = new Pizza('large, 'thin);
+```
+
+This pizza instance will have properties that look like this:
+```javascript
+let pizza = {
+  size: 'large',
+  curst: 'thin',
+  toppings: ['cheese']
+}
+```
+
+--
+
+## Primitives as Objects
+
+* Each primitive in JS (excluding `symbol` which has weird rules) has a corresponding **object constructor** (see example).
+
+```javascript
+typeof(true); 
+// "boolean" 
+typeof(Boolean(true)); 
+// => "boolean" 
+typeof(new Boolean(true));
+// => "object"
+```
+
+* An object constructor can be invoked with the keyword `new` => calling object constructors create new, unique *instances* of the objects requested
+
+* Bad practice to use object constructors when creating primitives, because you will run into issues when comparing them (*avoid!!!*)
+
+```javascript
+const greeting = "Hello, world!" 
+const objGreeting = new String("Hello, world!");
+
+greeting == objGreeting; 
+// => true
+
+greeting === objGreeting; 
+// => false
+```
+
+Despite having same string content, using `===` strict equality will return `false`, but using `==` will coerce one of the variable to the same type and return `true`. These issues can be quite problematic so avoid using these with primitive values if you can.
+
+> TL;DR: Use object constructors when instantiating complex objects to use with your classes, but avoid using them when you're creating primitives.
