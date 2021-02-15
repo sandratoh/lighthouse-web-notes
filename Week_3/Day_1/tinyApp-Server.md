@@ -35,3 +35,18 @@ app.set("view engine", "ejs");
 <% }%>
 
 ```
+
+## Partial Files
+
+* Make `partials` directory and include needed componenets in `views` ejs files
+* Use syntax  `<%- include('FILE NAME') %>`
+
+Example adding `views/partials/_header.ejs` to `views/urls_show.ejs`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/_header') %>
+  <meta charset="utf-8">
+---
+```
