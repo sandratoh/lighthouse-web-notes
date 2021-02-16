@@ -50,3 +50,37 @@ Example adding `views/partials/_header.ejs` to `views/urls_show.ejs`
   <meta charset="utf-8">
 ---
 ```
+
+## Getting Ready for POST request
+
+* When browser submits a POST request, the data in the request body is sent as a `Buffer` which is not human readable
+
+* Install a piece of middleware `body-parser` to convert to readable data
+
+```bash
+npm install body-parser
+```
+
+```javascript
+// add to server js file before all routes codes
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: true}));
+```
+
+* `body-parser` library will
+  1. convert the request body from a `Buffer` into human-readable string,
+  2. Add the data to the `req`(request) object under the key `body`
+
+## Redirection Response
+
+* When the browser receives a redirection response, it does another `GET` request to the `url` in the response
+
+* Use `res.redirect()`
+
+Example:
+```javascript
+app.get('/u/:shortURL', (req, res) => {
+  const longURL = urlDatabase[req.params.shortURL];
+  res.redirect(longURL);
+});
+```
