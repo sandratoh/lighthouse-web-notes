@@ -84,3 +84,8 @@ app.get('/u/:shortURL', (req, res) => {
   res.redirect(longURL);
 });
 ```
+
+## Purpose of Routing Middleware (e.g Express library)
+* It defines application endpoints (URIs)
+* Sends respones back to the client
+* Matches requested routes using pattern expressions (`'/ab*cd'`)
