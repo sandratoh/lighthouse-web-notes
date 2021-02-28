@@ -63,3 +63,22 @@ console.log(result); // 1
   * `3 + (n * 3) + n + 1` to
   * `4 + (n * 4)` which is written as...
   * `4n + 4` = runtime
+
+---
+
+## Running Time of Binary Search
+
+* An array of length 8 would need at most four guesses
+  * 8 -> 4 -> 2 -> 1 | no further guesses after
+
+* An array of length 16 would need at most five guesses
+  * 16 -> 8 -> 4 -> 2 -> 1 | no further guesses after
+
+### Pattern:
+> Every time we *double the size* of the array, we need at most *one more guess*
+
+* Given array length of `n` would need at most `m` guesses
+
+* An array length of `2n` would need at most `m+1` guesses
+
+* Repeatedly half the array (starting at `n`) until we get the value 1, plus one => **log<sub>2</sub>*n*** (base-2 logarithm of `n`)
