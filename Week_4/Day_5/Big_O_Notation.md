@@ -22,10 +22,49 @@ Possible technical interview Q: evaluate the running time of an algorithm using 
   3. Drop constant terms
     * Eg: when graphing `(n^3)/2` or `(n^3)*2`, curve is pretty much the same as `n^3`, so we can just get rid of constant `2`
   
-  ## Arbitrarily Large Input
+## Arbitrarily Large Input
 
-  * For small values, it doesn't really matter which one is faster or more efficient
+* For small values, it doesn't really matter which one is faster or more efficient
 
-  * Also, it's difficiult to identify the more efficient algorithm
+* Also, it's difficiult to identify the more efficient algorithm
 
-  
+## Drop Non-Dominant Terms
+
+* Certain terms cease to make a difference and becomes *insignificant* when `n` gets arbitrarily large
+
+* Example: 
+  * Running time:   `100n + n^2`
+  * Big O notation: `O(n^2)`
+
+* Big O is only interested in the **highest order term** - the larger the exponential number, the bigger the term
+
+* Example:
+  * Running time: `n^0 + n^1 + n^2 + n^3 + n^4`
+  * Big O notation: `O(n^4)`
+
+
+## Drop Constants
+
+* Big O notation is NOT used to describe the exact running time - only how its complexity grows *relative* to its input
+
+* Constants will not affect an algorithm's *growth rate*
+
+* Example:
+  * Algorithm: 
+    ```javascript
+    for (let i = 0; i < array.length; i++) {
+    // Do 100 different operations in each iteration
+    }
+    ```
+  * Running time: `102n + 2`
+    * Complexity grows linearly, `2` and `102` will stay constant regardless of input
+  * Big O notation: `O(n)`
+
+* More Examples
+
+|Running Time         |Growth Rate Pattern    |Big O notation|
+|-------------------- |-------------------    |--------------|
+| `3`                 | Constant              | `O(1)`       |
+| `2n + 3`            | Linear                | `O(n)`       |
+| `100n^2`            | Exponential/Quadratic | `O(n^2)`     |
+| `log n + 100000000` | Logarithmic           | `O(log n)`   |
