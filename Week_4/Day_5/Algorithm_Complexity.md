@@ -63,3 +63,11 @@ console.log(result); // 1
   * `3 + (n * 3) + n + 1` to
   * `4 + (n * 4)` which is written as...
   * `4n + 4` = runtime
+
+## Worst Case Scenario
+
+* In the worst possible situation, how long will the algorithm take to complete?
+
+* Think:
+  * if the target doesn't exist,
+  * algorithm can't find it and won't be able to break out of its loop early
