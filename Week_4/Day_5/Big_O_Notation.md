@@ -4,6 +4,8 @@ The official way to determine the *efficiency* of algorithms - **Big O Notation*
 
 Possible technical interview Q: evaluate the running time of an algorithm using Big O notation.
 
+*Note*: Big O is evaluating worst case scenario, the opposite of `O` is the best case scenario known as Ω (omega)
+
 ## Intro
 
 * Syntax: `O()`
@@ -68,3 +70,19 @@ Possible technical interview Q: evaluate the running time of an algorithm using 
 | `2n + 3`            | Linear                | `O(n)`       |
 | `100n^2`            | Exponential/Quadratic | `O(n^2)`     |
 | `log n + 100000000` | Logarithmic           | `O(log n)`   |
+
+
+## Computational Complexity
+Chart showing from fastest to slowest  running time
+
+|Big O notation      |Growth Rate Pattern|
+|--------------------|-------------------|
+| `O(1)`             | Constant          |
+| `O(log n)`         | Logarithmic       |
+| `O(n)`             | Linear            |
+| `O(n log n)`       | Lineararithmic    |
+| `O(n<sup>2</sup>)` | Quadratic         |
+| `O(n<sup>c</sup>)` | Polynomialic      |
+| `O(c<sup>n</sup>)` | Exponential       |
+| `O(n!)`            | Factorial         |
+| `O(x)`             | Infinite          |
