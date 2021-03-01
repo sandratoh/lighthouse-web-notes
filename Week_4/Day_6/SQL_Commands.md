@@ -88,16 +88,6 @@ SELECT name, area FROM world
 
 * `NOT IN` - exclude from result (opposite of `IN`, same syntax)
 
-### Escaping single quotes
-* use two single quotes within a quoted string
-
-Example:
-```sql
-SELECT yr, subject, winner
-FROM nobel
-WHERE winner = 'Eugene O''Neill'
-```
-
 ## Useful Functions & Clauses
 
 ### Aggregates
@@ -147,3 +137,36 @@ FROM world
 GROUP BY continent
 HAVING SUM(population) >= 100000000
 ```
+
+## Joining Tables and Referencing Keys
+```sql
+-- selcting data from table 1 and joining table2
+JOIN table2 ON table2.primary_key = table1.foreign_key
+```
+* Keywords: `JOIN` and `ON`
+
+## Quotation Marks
+
+> Rule of thumb:
+> * Single quotes for arguments and parameters
+> * Double quotes for column renaming
+
+Example:
+```sql
+SELECT long-url, user_id AS "user identification number"
+  FROM urls
+  WHERE long_url LIKE 'www.g%.c%'
+```
+
+> Escaping single quotes:
+> * use two single quotes within a quoted string
+
+Example:
+```sql
+SELECT yr, subject, winner
+FROM nobel
+WHERE winner = 'Eugene O''Neill'
+```
+
+## Limit query result:
+* `LIMIT ... OFFSET ...`
