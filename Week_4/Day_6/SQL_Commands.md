@@ -145,6 +145,33 @@ JOIN table2 ON table2.primary_key = table1.foreign_key
 ```
 * Keywords: `JOIN` and `ON`
 
+* Default to `INNER JOIN`
+
+> If foregin key is `NULL`, the row will not be included in an `INNER JOIN`. In that case, we have to use an `OUTER JOIN`
+
+* Types of `OUTER JOIN`
+  1. `LEFT JOIN`  - can omit `OUTER`
+  2. `RIGHT JOIN` - can omit `OUTER`
+  3. `FULL`
+
+Example
+```sql
+-- return all students b/c students is to the LEFT of JOIN
+1. FROM students LEFT OUTER JOIN cohorts ON cohorts.id = cohort_id;
+
+-- return all cohorts because cohorts is to the RIGHT of JOIN
+2. FROM students RIGHT OUTER JOIN cohorts ON cohorts.id = cohort_id;
+
+-- return all rows from both tables, even when there is no match
+3. FROM students FULL OUTER JOIN cohorts ON cohorts.id = cohort_id;
+```
+
+Rearranging order of table to get the same result
+```sql
+1. FROM students LEFT JOIN cohorts ON cohorts.id = cohort_id;
+2. FROM cohorts RIGHT JOIN students ON cohorts.id = cohort_id;
+```
+
 ## Quotation Marks
 
 > Rule of thumb:
