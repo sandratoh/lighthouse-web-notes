@@ -26,3 +26,5 @@ This repository contains all of the notes taken by [Sandra](https://github.com/s
 
 * [Week 4](/Week_4)
   * [Day 2](/Week_4/Day_2)
+  * [Day 5](/Week_4/Day_5)
+  * [Day 6](/Week_4/Day_6)
