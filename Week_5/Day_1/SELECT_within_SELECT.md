@@ -1,4 +1,4 @@
-# `SELECT` within `SELECT
+# `SELECT` within `SELECT`
 
 ## Nested `SELECT` statements
 
@@ -23,7 +23,7 @@ WHERE gdp >= ALL (
                     FROM world
                    WHERE continent = 'Europe'
                         AND gdp>0
-                                    )
+                  )
 AND continent != 'Europe'
 ```
 
@@ -82,7 +82,5 @@ WHERE population/3 >= ALL (
                           WHERE x.continent = y.continent
                           -- exclude self country from the neighbours
                           AND x.name != y.name
-)
-
-
+                          )
 ```
