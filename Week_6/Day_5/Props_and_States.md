@@ -3,8 +3,11 @@
 ### Definitions
 **Props**: data passed from a parent componenet to a child component
   * Like passing args to a function except you can't change the *props* passed to a componet
+  * Props only change when the parent passes new one
 
 **State**: private data managed internally by the componenet
+  * State is owned locally - only exists at the level it was created at
+  * State is mutable - updated by the component that owns it
   * Triggers a `render()` when changed
 
 ### How to differentiate?
