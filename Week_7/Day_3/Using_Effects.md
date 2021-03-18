@@ -51,12 +51,15 @@ With cleanup phase: counts will go down one second after the last state change
 useEffect(() => {
   if (likes > 0) {
     const timeout = setTimeout(() => setLikes(prev => prev - 1), 1000);
-    return () => clearInterval(timeout); // clears the timer set above
+    return () => clearTimeout(timeout); // clears the timer set above
   }
 }, [likes]);
 ```
 
-* Return a function from the effect method that react calls during cleanup phase: `clearInterval`
+* `return` a function from the effect method that react calls during cleanup phase
+  * Eg: `clearTimeout` clears `setTimeout`
+  * Eg: `clearInterval` clears `setInterval`
+  * Eg: `document.removeEventListener('click', callbackFunction)` clears `document.addEventListener('click', callbackFunction)`
 
 * React will call the clean up function before it runs the new effect
 
