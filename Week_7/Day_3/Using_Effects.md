@@ -1,5 +1,15 @@
 # Using Effects
 
+## Syntax
+
+```jsx
+useEffect(() => {
+  // content to be executed when the useEffect is in effect
+
+  // return a way to stop the running code (cleanup function)
+}, ["Variables that you want to look at and re-execute the effect when changed"])
+```
+
 ## Setting State
 
 Two ways to use `useState` Hook function
@@ -55,6 +65,8 @@ useEffect(() => {
   }
 }, [likes]);
 ```
+
+> Notice how the condition `if (likes > 0 ) {}` is inside the `useEffect` and NOT outside it because of Hook Rule #1. See [Client Request and Side Effects](/Week_7/Day_3/Client_Request_and_Side_Effects.md)
 
 * `return` a function from the effect method that react calls during cleanup phase
   * Eg: `clearTimeout` clears `setTimeout`
