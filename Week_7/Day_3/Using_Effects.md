@@ -66,7 +66,7 @@ useEffect(() => {
 }, [likes]);
 ```
 
-> Notice how the condition `if (likes > 0 ) {}` is inside the `useEffect` and NOT outside it because of Hook Rule #1. See [Client Request and Side Effects](/Week_7/Day_3/Client_Request_and_Side_Effects.md)
+> Notice how the condition `if (likes > 0 ) {}` is inside the `useEffect` and NOT outside it because of Hook Rule #1. See [Client Request and Side Effects](/Week_7/Day_3/Client_Requests_and_Side_Effects.md)
 
 * `return` a function from the effect method that react calls during cleanup phase
   * Eg: `clearTimeout` clears `setTimeout`
