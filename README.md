@@ -52,3 +52,4 @@ This repository contains all of the notes taken by [Sandra](https://github.com/s
 
 * [Week 9](/Week_9)
   * [Day 1](/Week_9/Day_1)
+  * [Day 2](/Week_9/Day_2)
