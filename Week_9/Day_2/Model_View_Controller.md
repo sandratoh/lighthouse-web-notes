@@ -86,3 +86,15 @@ Step 6: The view for the users index.
 
 <%= link_to 'New User', new_user_path %>
 ```
+
+## Rails & MVC
+ 
+Model       => DB => Active Record
+View        => ERB Templates
+Controller  => Project Manager
+
+## Conclusion 
+
+* MVC is a **Design or Architecture Pattern** that is used by Rails (and other frameworks) that help devs make sense of complicated web application codes.
+
+* Using MVC, we are able to split the codes up to various different parts and deal with user requests
