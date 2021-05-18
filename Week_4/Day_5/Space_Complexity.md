@@ -6,7 +6,7 @@
 
 **Time complexity**: How much more **runtime** do we need as the inputs provided to the code gets larger?
 
-Both use the [_Big O Notation_](./Big_O_Notation).
+Both use the [_Big O Notation_](./Big_O_Notation.md).
 
 ## Rule of Thumb
 
